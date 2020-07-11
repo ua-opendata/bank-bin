@@ -1,0 +1,39 @@
+{
+    "name": "ua-opendata/bank-bin",
+    "description": "Ukranian Banks BIN database",
+    "type": "library",
+    "require-dev": {
+        "phpunit/phpunit": "^9.2",
+        "squizlabs/php_codesniffer": "^3.5",
+        "phpstan/phpstan": "^0.12.32"
+    },
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Alexander",
+            "email": "recalmme@gmail.com"
+        }
+    ],
+    "minimum-stability": "stable",
+    "require": {
+        "php": "7.* | 8.*",
+        "ext-json": "*"
+    },
+    "scripts": {
+        "lint": "phpcs --standard=PSR2 ./src ./tests",
+        "phpcbf": "phpcbf --standard=PSR2 ./src ./tests",
+        "cover": "phpunit --coverage-clover=coverage.xml",
+        "test": "phpunit --coverage-text",
+        "analyse": "phpstan analyse"
+    },
+    "autoload": {
+        "psr-4": {
+            "UaOpenData\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "UaOpenData\\Tests\\": "tests/"
+        }
+    }
+}
