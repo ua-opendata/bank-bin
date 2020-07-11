@@ -12,13 +12,15 @@ final class BankRepository
     private function __construct()
     {
         $this->db = json_decode(
-            file_get_contents(dirname(__DIR__) . DIRECTORY_SEPARATOR . "data" . DIRECTORY_SEPARATOR . "db.json"),
+            file_get_contents(
+                dirname(__DIR__) . DIRECTORY_SEPARATOR . "docs" . DIRECTORY_SEPARATOR . "db.json"
+            ) ?: "}{",
             true,
             JSON_THROW_ON_ERROR
         );
     }
 
-    public static function instance()
+    public static function instance(): BankRepository
     {
         if (!isset(static::$instance)) {
             static::$instance = new static;

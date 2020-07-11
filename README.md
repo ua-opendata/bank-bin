@@ -5,7 +5,7 @@
 [![Build Status](https://travis-ci.org/ua-opendata/bank-bin.svg?branch=master)](https://travis-ci.org/ua-opendata/bank-bin)
 [![codecov](https://codecov.io/gh/ua-opendata/bank-bin/branch/master/graph/badge.svg)](https://codecov.io/gh/ua-opendata/bank-bin)
 
-[JSON Database](./data/db.json)
+[JSON Database](docs/db.json)
 
 ## Installation
 Using composer:
